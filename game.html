@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>BTS Website</title>
+        <script>
+            function getRandomNumber(minNumber, maxnumber)
+            { 
+            let something=0
+            return Math.floor(Math.random()*(maxnumber-minNumber+1)+ minNumber)
+            }
+            // our game definitions
+            let rock=1
+            let paper=2
+            let scissors=3
+            const MIN=1
+            const MAX=2
+            // selections
+            let player=prompt("Chose: 1 for rock  , 2 for paper, 3 for scissors")
+            let computer=getRandomNumber(MIN,MAX)
+            //alert("You chose "+player)
+            if (player==1) {alert ("You chose rock")
+                } else if (player==2) {alert ("You chose paper")
+            } else if (player==3) {alert ("You chose scissors")
+            } else   {alert ("You made a mistake")
+            }
+            alert ("Computer chose " + computer)
+            //let's fight
+            if (player==computer){
+            alert("It's a tie")}
+            else if (player ==1 && computer==3)
+            {alert("You win")}
+            else if (player ==2 && computer==1){alert("You win")}
+            else if (player ==3 && computer==2){alert("You win")}
+            else {alert ("You Lose")}
+        </script>
+    </head>
+    <body>
+        <!--This is a coment-->
+        <h1>Page España    </h1>
+        <p>Page content <strong> goes here.</strong></p>
+    </body>
+</html>
+
