@@ -1,0 +1,33 @@
+<html> 
+    <head>
+        <meta charset="utf-8" />
+        <title>Invest</title>
+        <script>
+            //function
+            function cap(amount_1,interest_1,year_1)
+            { 
+            capital_1 = amount_1 * (1 + interest_1 / 100)**year_1
+            return capital_1
+            }
+
+            //Var  
+            let amount = prompt("Enter the amount to invest: ")
+            let interest = prompt("Enter the annual interest rate(%): ")
+            let years = prompt("Enter the number of years:")
+            //while
+            let counter=1
+            while (counter <= years) {
+            //console.log("Hello times " + counter)
+            capital=cap(amount,interest,counter)
+            alert("Capital after "+ counter +" year: "+capital)
+            counter = counter + 1
+            //amount=capital
+            }
+        </script>
+    </head> 
+    <body>
+        <!--This is a coment-->
+        <h1> Capital </h1>
+        <!--<p> The <strong>  number of liters </strong> Nathan should drink </p> -->
+    </body> 
+</html>

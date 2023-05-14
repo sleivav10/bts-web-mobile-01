@@ -8,11 +8,22 @@
             let something=0
             return Math.floor(Math.random()*(maxnumber-minNumber+1)+ minNumber)
             }
-            let couter=1
-            let times=5
-            while (counter <= times) {
-            console.log("Hello times " + counter)
-            counter = counter + 1
+            function yourchoose(player_1)
+            { 
+            if (player_1==1) {return ("You chose rock")}
+            else if (player_1==2) {return ("You chose paper")} 
+            else if (player_1==3) {return ("You chose scissors")
+            } else   {return ("You made a mistake")            }
+            } 
+            function Ganador(player_1,computer_1)
+            {
+            if (player_1==computer_1){
+            alert("It's a tie")}
+            else if (player_1 ==1 && computer_1==3)
+            {return("You win")}
+            else if (player_1 ==2 && computer_1==1){return("You win")}
+            else if (player_1 ==3 && computer_1==2){return("You win")}
+            else {return ("You Lose")}
             }
             // our game definitions
             let rock=1
@@ -21,23 +32,25 @@
             const MIN=1
             const MAX=2
             // selections
+        
+            let counter=1
+            let times=3
+            while (counter <= times) 
+            {
             let player=prompt("Chose: 1 for rock  , 2 for paper, 3 for scissors")
             let computer=getRandomNumber(MIN,MAX)
-            //alert("You chose "+player)
-            if (player==1) {alert ("You chose rock")
-                } else if (player==2) {alert ("You chose paper")
-            } else if (player==3) {alert ("You chose scissors")
-            } else   {alert ("You made a mistake")
-            }
+            //alert("You chose "+player)      
+            alert(yourchoose(player))
             alert ("Computer chose " + computer)
             //let's fight
-            if (player==computer){
-            alert("It's a tie")}
-            else if (player ==1 && computer==3)
-            {alert("You win")}
-            else if (player ==2 && computer==1){alert("You win")}
-            else if (player ==3 && computer==2){alert("You win")}
-            else {alert ("You Lose")}
+            result=Ganador(player,computer)   
+                earn=0
+                if(result=="You Win"){earn=earn+1}
+                else{earn=0}
+            counter = counter + 1
+            }
+            if(earn>=2){alert("You win more than 1")}
+            else{alert("Tie or computer win")}
         </script>
     </head>
     <body>
