@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>BTS Website</title>
+        <script>
+            function getRandomNumber(minNumber, maxnumber)
+            { 
+            let something=0
+            return Math.floor(Math.random()*(maxnumber-minNumber+1)+ minNumber)
+            }
+            function yourchoose(player_1)
+            { 
+            if (player_1==1) {return ("You chose rock")}
+            else if (player_1==2) {return ("You chose paper")} 
+            else if (player_1==3) {return ("You chose scissors")
+            } else   {return ("You made a mistake")            }
+            } 
+            function Ganador(player_1,computer_1)
+            {
+            if (player_1==computer_1){
+            alert("It's a tie")}
+            else if (player_1 ==1 && computer_1==3)
+            {return("You win")}
+            else if (player_1 ==2 && computer_1==1){return("You win")}
+            else if (player_1 ==3 && computer_1==2){return("You win")}
+            else {return ("You Lose")}
+            }
+            // our game definitions
+            let rock=1
+            let paper=2
+            let scissors=3
+            const MIN=1
+            const MAX=2
+            // selections
+        
+            let counter=1
+            let times=3
+            let you_win=0
+            let com_win=0
+            while (counter <= times) 
+            {
+            let player=prompt("Chose: 1 for rock  , 2 for paper, 3 for scissors")
+            let computer=getRandomNumber(MIN,MAX)
+            //alert("You chose "+player)      
+            alert(yourchoose(player))
+            alert ("Computer chose " + computer)
+            //let's fight
+            result=Ganador(player,computer)
+            alert(result)   
+                if(result=="You win"){you_win=you_win+1}
+                else if(result=="You Lose"){com_win=com_win+1}
+                else{"Another option"}
+                console.log("N° win " + you_win)
+            counter = counter + 1
+            }
+            alert("Your number of games won: "+ you_win)
+            alert("Computer number of games won: "+ com_win)
+            if(you_win>=2){alert("You won more than 1")}
+            else if (com_win>=2){alert("Computer won more than 1")}
+            else{alert("Another result or Tie")}
+        </script>
+    </head>
+    <body>
+        <!--This is a coment-->
+        <h1>Page España    </h1>
+        <p>Page content <strong> goes here.</strong></p>
+    </body>
+</html>
+
