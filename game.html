@@ -35,6 +35,8 @@
         
             let counter=1
             let times=3
+            let you_win=0
+            let com_win=0
             while (counter <= times) 
             {
             let player=prompt("Chose: 1 for rock  , 2 for paper, 3 for scissors")
@@ -43,14 +45,15 @@
             alert(yourchoose(player))
             alert ("Computer chose " + computer)
             //let's fight
-            result=Ganador(player,computer)   
-                earn=0
-                if(result=="You Win"){earn=earn+1}
-                else{earn=0}
+            result=Ganador(player,computer)
+            alert(result)   
+                if(result=="You Win"){you_win=you_win+1}
+                if (result=="You Lose"){com_win=com_win+1}
             counter = counter + 1
             }
-            if(earn>=2){alert("You win more than 1")}
-            else{alert("Tie or computer win")}
+            if(you_win>=2){alert("You win more than 1")}
+            else if (com_win>=2){alert("Computer win more than 1")}
+            else{alert("Another result or Tie")}
         </script>
     </head>
     <body>
